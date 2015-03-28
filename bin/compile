@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+bp_dir=$(cd $(dirname $0); cd ..; pwd)
+build_dir=$1
+cache_dir=$2
+env_dir=$3
+
+source $bp_dir/lib/common.sh
+
+export_env_dir $env_dir
+cd $build_dir
+
+head "Building webpack bundle"
+$(npm bin)/webpack --profile --display-modules
