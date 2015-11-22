@@ -8,6 +8,7 @@ env_dir=$3
 source $bp_dir/lib/common.sh
 
 export_env_dir $env_dir
+export_node_env
 cd $build_dir
 
 head "Building webpack bundle"
