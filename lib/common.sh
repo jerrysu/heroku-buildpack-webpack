@@ -15,3 +15,7 @@ export_env_dir() {
     done
   fi
 }
+
+export_node_env() {
+  export NODE_ENV=${NODE_ENV:-production}
+}
