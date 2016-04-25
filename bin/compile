@@ -10,5 +10,10 @@ source $bp_dir/lib/common.sh
 export_env_dir $env_dir
 cd $build_dir
 
+if ![ -f "$1/$WEBPACK_CONF_PATH" ]; then
+  echo "Could not find path from WEBPACK_CONF_PATH: $WEBPACK_CONF_PATH"
+  exit 1
+fi
+
 head "Building webpack bundle"
-$(npm bin)/webpack --profile --display-modules
+$(npm bin)/webpack --profile --config $WEBPACK_CONF_PATH
