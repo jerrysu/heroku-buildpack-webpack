@@ -11,4 +11,4 @@ export_env_dir $env_dir
 cd $build_dir
 
 head "Building webpack bundle"
-$(npm bin)/webpack --profile --display-modules
+$(npm bin)/webpack --profile --display-modules --optimize-minimize
