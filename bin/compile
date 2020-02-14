@@ -11,5 +11,4 @@ export_env_dir $env_dir
 cd $build_dir
 
 head "Building webpack bundle"
-npm install
 $(npm bin)/webpack --profile --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js`
